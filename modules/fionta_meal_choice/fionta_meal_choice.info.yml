@@ -1,0 +1,12 @@
+name: 'Fionta Meal Choice'
+type: module
+description: 'Custom Module in which people can make their meal choice'
+core_version_requirement: ^8.8 || ^9
+dependencies:
+  - drupal:view_custom_table
+
+# Information added by Drupal.org packaging script on 2021-12-08
+version: '9.3.3'
+project: 'fionta_meal_choice'
+package: 'fionta_meal_choice'
+datestamp: 1643601694

@@ -1,0 +1,6 @@
+fionta_meal_choice:
+  table_name: fionta_meal_choice
+  table_database: default
+  description: ''
+  column_relations: 'a:0:{}'
+  created_by: '1'

@@ -1,0 +1,7 @@
+fionta_meal_choice.settings:
+  path: '/meal-choice'
+  defaults:
+    _form: '\Drupal\fionta_meal_choice\Form\MealChoiceForm'
+    _title: 'Fionta Meal Choice'
+  requirements:
+    _permission: 'access content'

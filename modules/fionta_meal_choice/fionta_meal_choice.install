@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * hook_schema()
+ */
+function fionta_meal_choice_schema() {
+
+  $schema['fionta_meal_choice'] = array(
+    'description' => 'Fionta Meal Choice',
+    'fields' => array(
+      'mid' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key: Unique Meal Choice ID.',
+      ),
+      'user_name' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Name of the User.',
+      ),
+      'user_mail' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Email address of the User.',
+      ),
+      'meal_type' => array(
+        'type' => 'varchar',
+        'length' => 16,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Type of Meal for the User.',
+      ),
+      'dietary_restrictions' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'default' => '',
+        'description' => 'Dietary Restrictions for the User.',
+      ),
+      'special_instructions' => array(
+        'type' => 'varchar',
+        'length' => 512,
+        'default' => '',
+        'description' => 'Special instructions for the User.',
+      ),
+    ),
+    'primary key' => array('mid'),
+    'indexes' => array(
+      'user_name' => array('user_name'),
+      'user_mail' => array('user_mail'),
+      'meal_type' => array('meal_type'),
+    ),
+  );
+  return $schema;
+}

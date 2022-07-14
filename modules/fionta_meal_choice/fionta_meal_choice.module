@@ -1,0 +1,18 @@
+<?php
+
+/**
+* Implements hook_mail().
+*/
+function fionta_meal_choice_mail($key, &$message, $params) {
+  $options = array(
+    'langcode' => $message['langcode'],
+  );
+
+  switch ($key) {
+    case 'meal_choice':
+      $message['from'] = "uttam@mpiresolutions.com";
+      $message['subject'] = t('Order places with special instructions', array(), $options);
+      $message['body'][] = $params['message'];
+      break;
+  }
+}
